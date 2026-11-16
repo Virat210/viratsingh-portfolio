@@ -73,7 +73,9 @@ const projects = [
       "HTML/CSS/JS",
       "NoSQL"
     ],
-    icon: "📄"
+    icon: "📄",
+    image: "https://res.cloudinary.com/dmruk1niu/image/upload/v1773525461/ats_score_feature_image_vddgzx.png",
+    imageAlt: "Laptop displaying an automated resume screening dashboard with a match score and skill analysis"
   },
   {
     number: "02",
@@ -95,7 +97,9 @@ const projects = [
       "REST APIs",
       "MySQL"
     ],
-    icon: "🌾"
+    icon: "🌾",
+    image: "https://images.beetleregen.com/blogs/c23fhfzm21w38ux5occrlt1t2-content-3-5736c7a0.webp",
+    imageAlt: "Farmer using a tablet in a crop field for digital agriculture"
   }
 ];
 
@@ -457,34 +461,13 @@ function App() {
                 key={project.number}
               >
 
-                <div
-                  className={`project-visual project-${project.number}`}
-                >
-
-                  <span className="project-number">
-                    {project.number}
-                  </span>
-
-                  <div className="project-window">
-
-                    <div className="window-dots">
-                      <i></i>
-                      <i></i>
-                      <i></i>
-                    </div>
-
-                    <div className="window-line long"></div>
-                    <div className="window-line medium"></div>
-                    <div className="window-line short"></div>
-
-                    <div className="window-button"></div>
-
-                  </div>
-
-                  <span className="project-icon">
-                    {project.icon}
-                  </span>
-
+                <div className={`project-visual project-${project.number}`}>
+                  <img
+                    className="project-image"
+                    src={project.image}
+                    alt={project.imageAlt}
+                    loading="lazy"
+                  />
                 </div>
 
                 <div className="project-content">
