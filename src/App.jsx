@@ -188,14 +188,6 @@ function App() {
             ))}
           </nav>
 
-          <button
-            type="button"
-            className="talk-button"
-            onClick={() => handleNav("Contact", "contact")}
-          >
-            Let's Talk
-          </button>
-
         </div>
       </header>
 
